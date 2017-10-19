@@ -1,55 +1,74 @@
-function TodoCtrl($scope) {
-    $scope.todos = [];
-    $scope.markAll = false;
-      
-    $scope.addTodo = function() {
-        if(event.keyCode == 13 && $scope.todoText){
-            $scope.todos.push({text:$scope.todoText, done:false});
-            $scope.todoText = '';
-        }
-    };
-    $scope.isTodo = function(){
-        return $scope.todos.length > 0;  
-    }
-    $scope.toggleEditMode = function(){
-        $(event.target).closest('li').toggleClass('editing');
-    };
-    $scope.editOnEnter = function(todo){
-        if(event.keyCode == 13 && todo.text){
-            $scope.toggleEditMode();
-        }
-    };
-      
-    $scope.remaining = function() {
-      var count = 0;
-      angular.forEach($scope.todos, function(todo) {
-        count += todo.done ? 0 : 1;
-      });
-      return count;
-    };
-  
-    $scope.hasDone = function() {
-        return ($scope.todos.length != $scope.remaining());
-    }    
-      
-    $scope.itemText = function() {
-        return ($scope.todos.length - $scope.remaining() > 1) ? "items" : "item";     
-    };
+
+angular.module('todoApp', [])
+    .controller('todoCtrl', [
+    '$scope',
+    function($scope){
         
-    $scope.toggleMarkAll = function() {
-        angular.forEach($scope.todos, function(todo) {
-          todo.done =$scope.markAll;
-        });
-    };
-    
-    $scope.clear = function() {
-      var oldTodos = $scope.todos;
-      $scope.todos = [];
-      angular.forEach(oldTodos, function(todo) {
-        if (!todo.done) $scope.todos.push(todo);
-      });
-    };
-      
-  }
-  
-  
+        $scope.monTodos = [
+            {text:'say hello', done:false}
+        ];
+
+        $scope.tueTodos = [
+            
+        ];
+
+        $scope.wedTodos = [
+            
+        ];
+
+        $scope.thuTodos = [
+            
+        ];
+
+        $scope.friTodos = [
+            
+        ];
+
+        $scope.satTodos = [
+            
+        ];
+
+        $scope.sunTodos = [
+            
+        ];
+
+
+        $scope.monAddTodo = function() {
+            $scope.monTodos.push({text:$scope.monTodoText, done:false});
+            $scope.monTodoText='';
+        };
+
+        $scope.tueAddTodo = function() {
+            $scope.tueTodos.push({text:$scope.tueTodoText, done:false});
+            $scope.tueTodoText='';
+        };
+
+        $scope.wedAddTodo = function() {
+            $scope.wedTodos.push({text:$scope.wedTodoText, done:false});
+            $scope.wedTodoText='';
+        };
+        
+        $scope.thuAddTodo = function() {
+            $scope.thuTodos.push({text:$scope.thuTodoText, done:false});
+            $scope.thuTodoText='';
+        };
+
+        $scope.friAddTodo = function() {
+            $scope.friTodos.push({text:$scope.friTodoText, done:false});
+            $scope.friTodoText='';
+        };
+
+        $scope.satAddTodo = function() {
+            $scope.satTodos.push({text:$scope.satTodoText, done:false});
+            $scope.satTodoText='';
+        };
+
+        $scope.sunAddTodo = function() {
+            $scope.sunTodos.push({text:$scope.sunTodoText, done:false});
+            $scope.sunTodoText='';
+        };
+    }
+]);
+
+
+

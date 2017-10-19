@@ -1,45 +1,121 @@
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>    
+        <title>Week Scheduler</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
         <script src="weekScheduler.js"></script>
+        <link rel="stylesheet" type="text/css" href="weekScheduler.css">
     </head>
 
     <body>
-        <div ng-app>
-            <div id="todoapp" ng-controller="TodoCtrl">
-                <header>
-                    <h1>Todos by Angular.js</h1>
-                    <input id="new-todo" type="text" ng-model="todoText"  size="30"
-                    placeholder="What needs to be done?" ng-keyup="addTodo()"/>
-                </header>
-            
-                <section id="main" style="display: block;">
-                    <div ng-show="isTodo()">
-                    <input id="toggle-all" type="checkbox" ng-model="markAll"
-                        ng-click="toggleMarkAll()"/>
-                    <label for="toggle-all">Mark all as complete</label>
+
+        <div ng-app='todoApp' ng-controller="todoCtrl">
+
+                <h1>Week Scheduler</h1>
+
+                <div id="monday">
+                    <div>
+                        <h3>Monday</h3>
+                        <form ng-submit="monAddTodo()">
+                            <input type="text" ng-model="monTodoText"></input>
+                            <button type="submit">Post</button>       
+                        </form>    
                     </div>
-                    
-                    <ul id="todo-list" class="unstyled">
-                    <li ng-repeat="todo in todos" ng-dblclick="toggleEditMode()">
-                        <div class="view" ng-keyup="editTodo()">
-                        <input type="checkbox" ng-model="todo.done"/>
-                        <span class="done-{{todo.done}}" >{{todo.text}}</span>
-                        </div>
-                        <input class="edit" type="text" ng-model="todo.text"
-                        ng-keyup="editOnEnter(todo)"/>
-                    </li>
-                    </ul>
-                </section>
+                    <div ng-repeat="monTodo in monTodos">
+                        <input type="checkbox" ng-model="monTodo.done"/>
+                        <span class="done-{{monTodo.done}}" >{{monTodo.text}}</span>
+                    </div>
+                </div>
                 
-                <footer style="display: block;">
-                    <div class="todo-count">{{remaining()}} of {{todos.length}} remaining</div>
-                    <a id="clear-completed" ng-click="clear()" ng-show="hasDone()">
-                        Clear <span >{{(todos.length - remaining())}} {{itemText()}}</span>.
-                    </a>
-                </footer>
-                    
-            </div>
+      
+                <div id="tuesday">
+                    <div>
+                        <h3>Tuesday</h3>
+                        <form ng-submit="tueAddTodo()">
+                            <input type="text" ng-model="tueTodoText"></input>
+                            <button type="submit">Post</button>       
+                        </form>    
+                    </div>
+                    <div ng-repeat="tueTodo in tueTodos">
+                        <input type="checkbox" ng-model="tueTodo.done"/>
+                        <span class="done-{{tueTodo.done}}" >{{tueTodo.text}}</span>                    
+                    </div>
+                </div>
+
+
+                <div id="wednesday">
+                    <div>
+                        <h3>Wednesday</h3>
+                        <form ng-submit="wedAddTodo()">
+                            <input type="text" ng-model="wedTodoText"></input>
+                            <button type="submit">Post</button>       
+                        </form>    
+                    </div>
+                    <div ng-repeat="wedTodo in wedTodos">
+                        <input type="checkbox" ng-model="wedTodo.done"/>
+                        <span class="done-{{wedTodo.done}}" >{{wedTodo.text}}</span>                    
+                    </div>
+                </div>
+
+
+                <div id="thursday">
+                    <div>
+                        <h3>Thursday</h3>
+                        <form ng-submit="thuAddTodo()">
+                            <input type="text" ng-model="thuTodoText"></input>
+                            <button type="submit">Post</button>       
+                        </form>    
+                    </div>
+                    <div ng-repeat="thuTodo in thuTodos">
+                        <input type="checkbox" ng-model="thuTodo.done"/>
+                        <span class="done-{{thuTodo.done}}" >{{thuTodo.text}}</span>                    
+                    </div>
+                </div>
+
+
+                <div id="friday">
+                    <div>
+                        <h3>Friday</h3>
+                        <form ng-submit="friAddTodo()">
+                            <input type="text" ng-model="friTodoText"></input>
+                            <button type="submit">Post</button>       
+                        </form>    
+                    </div>
+                    <div ng-repeat="friTodo in friTodos">
+                        <input type="checkbox" ng-model="friTodo.done"/>
+                        <span class="done-{{friTodo.done}}" >{{friTodo.text}}</span>                    
+                    </div>
+                </div>
+
+
+                <div id="saturday">
+                    <div>
+                        <h3>Saturday</h3>
+                        <form ng-submit="satAddTodo()">
+                            <input type="text" ng-model="satTodoText"></input>
+                            <button type="submit">Post</button>       
+                        </form>    
+                    </div>
+                    <div ng-repeat="satTodo in satTodos">
+                        <input type="checkbox" ng-model="satTodo.done"/>
+                        <span class="done-{{satTodo.done}}" >{{satTodo.text}}</span>                    
+                    </div>
+                </div>
+
+
+                <div id="sunday">
+                    <div>
+                        <h3>Sunday</h3>
+                        <form ng-submit="sunAddTodo()">
+                            <input type="text" ng-model="sunTodoText"></input>
+                            <button type="submit">Post</button>       
+                        </form>    
+                    </div>
+                    <div ng-repeat="sunTodo in sunTodos">
+                        <input type="checkbox" ng-model="sunTodo.done"/>
+                        <span class="done-{{sunTodo.done}}" >{{sunTodo.text}}</span>                    
+                    </div>
+                </div>
+
         </div>
     </body>
 
