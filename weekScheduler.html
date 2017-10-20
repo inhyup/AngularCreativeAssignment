@@ -4,19 +4,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
         <script src="weekScheduler.js"></script>
         <link rel="stylesheet" type="text/css" href="weekScheduler.css">
-    </head>
+   	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
+	 </head>
 
-    <body>
+    <body style="background-color:#34495e;">
 
-        <div ng-app='todoApp' ng-controller="todoCtrl">
+        <div id="container" ng-app='todoApp' ng-controller="todoCtrl">
 
-                <h1>Week Scheduler</h1>
-
+                <h1 id="header">Week Scheduler</h1>
+					 <table class = "container card"> 
+					 <tr>
+					 <th>
                 <div id="monday">
                     <div>
                         <h3>Monday</h3>
                         <form ng-submit="monAddTodo()">
-                            <input type="text" ng-model="monTodoText"></input>
+                            <input size="15" type="text" ng-model="monTodoText"></input>
                             <button type="submit">Post</button>       
                         </form>    
                     </div>
@@ -25,13 +29,14 @@
                         <span class="done-{{monTodo.done}}" >{{monTodo.text}}</span>
                     </div>
                 </div>
-                
-      
+                </th>
+					 
+					 <th>
                 <div id="tuesday">
                     <div>
                         <h3>Tuesday</h3>
                         <form ng-submit="tueAddTodo()">
-                            <input type="text" ng-model="tueTodoText"></input>
+                            <input size="15" type="text" ng-model="tueTodoText"></input>
                             <button type="submit">Post</button>       
                         </form>    
                     </div>
@@ -40,13 +45,14 @@
                         <span class="done-{{tueTodo.done}}" >{{tueTodo.text}}</span>                    
                     </div>
                 </div>
-
-
+					 </th>
+	
+					 <th>
                 <div id="wednesday">
                     <div>
                         <h3>Wednesday</h3>
                         <form ng-submit="wedAddTodo()">
-                            <input type="text" ng-model="wedTodoText"></input>
+                            <input size="15" type="text" ng-model="wedTodoText"></input>
                             <button type="submit">Post</button>       
                         </form>    
                     </div>
@@ -55,13 +61,14 @@
                         <span class="done-{{wedTodo.done}}" >{{wedTodo.text}}</span>                    
                     </div>
                 </div>
+					 </th>
 
-
+					 <th>
                 <div id="thursday">
                     <div>
                         <h3>Thursday</h3>
                         <form ng-submit="thuAddTodo()">
-                            <input type="text" ng-model="thuTodoText"></input>
+                            <input size="15" type="text" ng-model="thuTodoText"></input>
                             <button type="submit">Post</button>       
                         </form>    
                     </div>
@@ -70,13 +77,14 @@
                         <span class="done-{{thuTodo.done}}" >{{thuTodo.text}}</span>                    
                     </div>
                 </div>
+					 </th>
 
-
+					 <th>
                 <div id="friday">
                     <div>
                         <h3>Friday</h3>
                         <form ng-submit="friAddTodo()">
-                            <input type="text" ng-model="friTodoText"></input>
+                            <input size="15" type="text" ng-model="friTodoText"></input>
                             <button type="submit">Post</button>       
                         </form>    
                     </div>
@@ -85,13 +93,14 @@
                         <span class="done-{{friTodo.done}}" >{{friTodo.text}}</span>                    
                     </div>
                 </div>
+					 </th>
 
-
+					 <th>
                 <div id="saturday">
                     <div>
                         <h3>Saturday</h3>
                         <form ng-submit="satAddTodo()">
-                            <input type="text" ng-model="satTodoText"></input>
+                            <input size="15" type="text" ng-model="satTodoText"></input>
                             <button type="submit">Post</button>       
                         </form>    
                     </div>
@@ -100,13 +109,14 @@
                         <span class="done-{{satTodo.done}}" >{{satTodo.text}}</span>                    
                     </div>
                 </div>
-
-
+					 </th>
+					
+					 <th>
                 <div id="sunday">
                     <div>
                         <h3>Sunday</h3>
                         <form ng-submit="sunAddTodo()">
-                            <input type="text" ng-model="sunTodoText"></input>
+                            <input size="15" type="text" ng-model="sunTodoText"></input>
                             <button type="submit">Post</button>       
                         </form>    
                     </div>
@@ -115,7 +125,9 @@
                         <span class="done-{{sunTodo.done}}" >{{sunTodo.text}}</span>                    
                     </div>
                 </div>
-
+					 </th>
+					 </tr>
+					 </table>
         </div>
     </body>
 
