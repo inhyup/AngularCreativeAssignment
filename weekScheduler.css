@@ -14,22 +14,23 @@ th, td {
     padding: 10px;
 }
 
-th{
-/*	width: 100px;*/
-}
 
 #header{
 	text-align: center;
-	color: white;
+	color: darkred;
+	margin: 50px;
 }
 
 #container{
-	margin: 100px 150px 100px 80px;
-	padding: 10px 10px 10px 10px;
-	/*background-color:#34495e; 
-	height: auto;*/
+	margin: 50px;
+	padding: 10px;
 }
 
 #textField{
-	size: 25;
+	size: 30;
+}
+
+body {
+	background-image:  url("background.jpg");	
+	background-size: 100%;
 }

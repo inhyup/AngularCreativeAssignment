@@ -8,7 +8,7 @@
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
 	 </head>
 
-    <body style="background-color:#34495e;">
+    <body>
 
         <div id="container" ng-app='todoApp' ng-controller="todoCtrl">
 
@@ -18,10 +18,9 @@
 					 <th>
                 <div id="monday">
                     <div>
-                        <h3>Monday</h3>
+                        <h5>Monday</h5>
                         <form ng-submit="monAddTodo()">
                             <input size="15" type="text" ng-model="monTodoText"></input>
-                            <button type="submit">Post</button>       
                         </form>    
                     </div>
                     <div ng-repeat="monTodo in monTodos">
@@ -34,10 +33,9 @@
 					 <th>
                 <div id="tuesday">
                     <div>
-                        <h3>Tuesday</h3>
+                        <h5>Tuesday</h5>
                         <form ng-submit="tueAddTodo()">
                             <input size="15" type="text" ng-model="tueTodoText"></input>
-                            <button type="submit">Post</button>       
                         </form>    
                     </div>
                     <div ng-repeat="tueTodo in tueTodos">
@@ -50,10 +48,9 @@
 					 <th>
                 <div id="wednesday">
                     <div>
-                        <h3>Wednesday</h3>
+                        <h5>Wednesday</h5>
                         <form ng-submit="wedAddTodo()">
                             <input size="15" type="text" ng-model="wedTodoText"></input>
-                            <button type="submit">Post</button>       
                         </form>    
                     </div>
                     <div ng-repeat="wedTodo in wedTodos">
@@ -66,10 +63,9 @@
 					 <th>
                 <div id="thursday">
                     <div>
-                        <h3>Thursday</h3>
+                        <h5>Thursday</h5>
                         <form ng-submit="thuAddTodo()">
                             <input size="15" type="text" ng-model="thuTodoText"></input>
-                            <button type="submit">Post</button>       
                         </form>    
                     </div>
                     <div ng-repeat="thuTodo in thuTodos">
@@ -82,10 +78,9 @@
 					 <th>
                 <div id="friday">
                     <div>
-                        <h3>Friday</h3>
+                        <h5>Friday</h5>
                         <form ng-submit="friAddTodo()">
                             <input size="15" type="text" ng-model="friTodoText"></input>
-                            <button type="submit">Post</button>       
                         </form>    
                     </div>
                     <div ng-repeat="friTodo in friTodos">
@@ -98,10 +93,9 @@
 					 <th>
                 <div id="saturday">
                     <div>
-                        <h3>Saturday</h3>
+                        <h5>Saturday</h5>
                         <form ng-submit="satAddTodo()">
                             <input size="15" type="text" ng-model="satTodoText"></input>
-                            <button type="submit">Post</button>       
                         </form>    
                     </div>
                     <div ng-repeat="satTodo in satTodos">
@@ -114,10 +108,9 @@
 					 <th>
                 <div id="sunday">
                     <div>
-                        <h3>Sunday</h3>
+                        <h5>Sunday</h5>
                         <form ng-submit="sunAddTodo()">
                             <input size="15" type="text" ng-model="sunTodoText"></input>
-                            <button type="submit">Post</button>       
                         </form>    
                     </div>
                     <div ng-repeat="sunTodo in sunTodos">
